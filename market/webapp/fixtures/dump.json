@@ -1,0 +1,112 @@
+[
+{
+  "model": "webapp.category",
+  "pk": 1,
+  "fields": {
+    "name": "Home",
+    "description": "Home items"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 2,
+  "fields": {
+    "name": "Kitchen",
+    "description": "Kitchen things"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 3,
+  "fields": {
+    "name": "Children",
+    "description": ""
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 4,
+  "fields": {
+    "name": "Bathroom",
+    "description": ""
+  }
+},
+{
+  "model": "webapp.item",
+  "pk": 1,
+  "fields": {
+    "name": "\u041f\u043e\u043b\u043e\u0442\u0435\u043d\u0446\u0435",
+    "description": "",
+    "arrive_date": "2019-04-06",
+    "price": "300.00",
+    "is_deleted": false,
+    "categories": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "webapp.item",
+  "pk": 2,
+  "fields": {
+    "name": "\u041a\u0440\u0443\u0436\u043a\u0430",
+    "description": "",
+    "arrive_date": "2019-04-09",
+    "price": "450.00",
+    "is_deleted": false,
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.item",
+  "pk": 3,
+  "fields": {
+    "name": "\u041c\u0438\u043a\u0441\u0435\u0440",
+    "description": "",
+    "arrive_date": "2019-03-16",
+    "price": "4500.50",
+    "is_deleted": false,
+    "categories": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.itemimage",
+  "pk": 1,
+  "fields": {
+    "item": 2,
+    "image": "images/cup1.jpg"
+  }
+},
+{
+  "model": "webapp.itemimage",
+  "pk": 2,
+  "fields": {
+    "item": 2,
+    "image": "images/6483.77_1.jpg"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Ovpi3FG7gjGl$Joi7t0HIc45umhPTrxSkh509mBobNHuI9sh5hPX44F8=",
+    "last_login": "2019-04-06T06:54:00.969Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-04-06T05:29:29.482Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
