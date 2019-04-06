@@ -35,7 +35,7 @@ class Item(models.Model):
 
 class ItemImage(models.Model):
     item = models.ForeignKey('Item', related_name='images', on_delete=models.PROTECT)
-    image = models.ImageField(upload_to='images', default='/images/default.img')
+    image = models.ImageField(upload_to='images')
 
 class Order(models.Model):
     user = models.ForeignKey(User, related_name='orders', on_delete=models.PROTECT)
