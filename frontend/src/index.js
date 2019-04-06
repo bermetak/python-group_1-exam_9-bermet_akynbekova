@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import "react-datepicker/dist/react-datepicker.css";
+
 
 import {createStore, applyMiddleware} from 'redux'
 import rootReducer from './store/reducers/root'
