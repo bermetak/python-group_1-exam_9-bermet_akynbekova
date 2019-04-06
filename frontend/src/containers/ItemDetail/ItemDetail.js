@@ -13,6 +13,13 @@ class ItemDetail extends Component {
         this.props.loadItem(this.props.match.params.id)
     }
 
+    // addToBasket = (id, amount) => {
+    //     localStorage.setItem('basket')
+    //     const basket = localStorage.getItem('basket')
+    //     basket.append(id, amount)
+    //     localStorage.setItem('basket', basket)
+    // }
+
     render() {
         {console.log(this.props.item)}
         const {name, description, arrive_date, categories, id, images} = this.props.item;
@@ -34,6 +41,7 @@ class ItemDetail extends Component {
             {description ? <p>{description}</p> : null}
 
             <NavLink to='/' className="btn btn-primary mr-2">Items</NavLink>
+            <button className="btn btn-primary mr-2" onClick={() => this.addToBasket(id, 1)}>Добавить в корзину</button>
         </div>;
     }
 }
