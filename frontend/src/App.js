@@ -5,6 +5,7 @@ import './App.css';
 
 import ItemList from "./containers/ItemList/ItemList";
 import {connect} from "react-redux";
+import ItemSortForm from "./containers/ItemSortForm/ItemSortForm";
 
 
 
@@ -18,7 +19,7 @@ class App extends Component {
                     {/*<Layout>*/}
                         <Switch>
 
-                            <Route path="/" component={ItemList}/>
+                            <Route path="/" component={ItemSortForm}/>
 
                         </Switch>
                     {/*</Layout>*/}
