@@ -1,6 +1,8 @@
 from webapp.models import Category, Item, ItemImage, Order
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
+from django.core.exceptions import ValidationError
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -47,3 +49,11 @@ class OrderSerializer(serializers.ModelSerializer):
         model = Order
         fields = ('url', 'id', 'user', 'phone', 'items', 'address', 'comment', 'date')
 
+class AuthTokenSerializer(serializers.Serializer):
+    token = serializers.CharField(write_only=True)
+
+    def validate_token(self, token):
+        try:
+            return Token.objects.get(key=token)
+        except Token.DoesNotExist:
+            raise ValidationError("Invalid credentials")
