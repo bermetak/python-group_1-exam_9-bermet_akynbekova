@@ -34,7 +34,7 @@ class ItemSortForm extends Component {
                     onChange={(values) => this.selectChanged('categories', values)}
             />
             <ItemList
-                sortedCategories={this.selectChanged}
+                // sortedCategories={this.selectChanged}
             />
         </Fragment>
     }

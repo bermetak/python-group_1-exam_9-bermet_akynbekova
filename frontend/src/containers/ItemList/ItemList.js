@@ -1,9 +1,8 @@
 import React, {Fragment, Component} from 'react'
 import ItemCard from "../../components/ItemCard/ItemCard";
-import {NavLink} from "react-router-dom";
 import {loadItems} from "../../store/actions/item-list";
 import {connect} from "react-redux";
-import ItemSortForm from "../ItemSortForm/ItemSortForm";
+
 
 
 class ItemList extends Component {
