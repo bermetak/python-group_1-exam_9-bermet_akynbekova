@@ -1,17 +1,23 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
+import defaultImage from './default.jpg'
 
 
 const Card = props => {
     return <div className={"card mt-3 text-center text-sm-left " + (props.className ? props.className : "")}>
-        {props.image ? <img className="card-img-top" src={props.image} alt='Фотография'/> : null}
-        {props.link ? <NavLink to={props.link}>
-            {props.header || props.text || props.linkUrl ? <div className="card-body">
-                {props.header ? <h5 className="card-title">{props.header}</h5> : null}
-                {props.text ? <p className="card-text">{props.text}</p> : null}
+        {console.log(props)}
+        {props.images[0] ?
+        <img className="card-img-top" src={props.images[0].image} alt='Фотография'/>
+        :
+        <img className="card-img-top" src={defaultImage} alt='Фотография'/>
+        }
+        <NavLink to={props.link}>
+            <div className="card-body">
+                <h5 className="card-title">{props.header}</h5>
+                <p className="card-text">{props.price}</p>
 
-            </div> : null}
-        </NavLink> : null}
+            </div>
+        </NavLink>
     </div>
 };
 
